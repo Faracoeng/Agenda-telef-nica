@@ -12,6 +12,9 @@ public class Pessoa {
 
     //Métodos
     public Pessoa(String n,String s,LocalDate dn){
+        this.nome = n;
+        this.sobrenome = s;
+        this.dataNasc = dn;
     }
 
     public boolean addTelefone(String r, String n){
