@@ -19,7 +19,7 @@ public class TestaEmail {
     @Test
     public void remove(){
         Email e = new Email();
-        e.add("pessoal", "camilla@gmail.com");
+        e.add("pessoal", "andre@gmail.com");
         Assert.assertFalse("Rótulo inexistente", e.remove("trabalho"));
         Assert.assertTrue("Remoção válida", e.remove("pessoal"));
     }
@@ -27,9 +27,9 @@ public class TestaEmail {
     @Test
     public void update(){
         Email e = new Email();
-        e.add("pessoal", "camilla@gmail.com");
-        Assert.assertFalse("Rótulo inexistente", e.update("trabalho", "novo@gmail.com"));
-        Assert.assertTrue("Update válido", e.update("pessoal", "novo@gmail.com"));
+        e.add("pessoal", "andre@gmail.com");
+        Assert.assertFalse("Rótulo inexistente", e.update("trabalho", "new@gmail.com"));
+        Assert.assertTrue("Update válido", e.update("pessoal", "new@gmail.com"));
     }
 
 }
