@@ -14,23 +14,23 @@ public class Email {
         tabelaDeEmails = new HashMap<>();
     }
 
-    public boolean add(String rotulo, String email){
-        if(!this.validacaoEmail(email)) return false;
-        if(tabelaDeEmails.containsKey(rotulo)) return false;
-        tabelaDeEmails.put(rotulo, email);
+    public boolean add(String r, String e){
+        if(!this.validacaoEmail(e)) return false;
+        if(tabelaDeEmails.containsKey(r)) return false;
+        tabelaDeEmails.put(r, e);
         return true;
     }
 
-    public boolean remove(String rotulo){
-        if(!tabelaDeEmails.containsKey(rotulo)) return false;
-        tabelaDeEmails.remove(rotulo);
+    public boolean remove(String r){
+        if(!tabelaDeEmails.containsKey(r)) return false;
+        tabelaDeEmails.remove(r);
         return true;
     }
 
-    public boolean update(String rotulo, String email){
-        if(!this.validacaoEmail(email)) return false;
-        if(!this.tabelaDeEmails.containsKey(rotulo)) return false;
-        this.tabelaDeEmails.put(rotulo, email);
+    public boolean update(String r, String e){
+        if(!this.validacaoEmail(e)) return false;
+        if(!this.tabelaDeEmails.containsKey(r)) return false;
+        this.tabelaDeEmails.put(r, e);
         return true;
     }
 
