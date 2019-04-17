@@ -5,12 +5,12 @@ import java.util.HashMap;
 public class Email {
     //Atributos
     private HashMap <String, String> tabelaDeEmails;
-    String emailER = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+    String emailER = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";  //Expressão regular do formato de telefone
 
     //Métodos
     private boolean validacaoEmail(String email){
 
-        return email.matches(emailER);
+        return email.matches(emailER);      //
     }
 
     public Email(){
