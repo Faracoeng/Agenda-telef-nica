@@ -21,15 +21,18 @@ public class Telefone {
     }
 
     public boolean remover(String r){
+
         return true;
     }
 
     public boolean update(String r, String n){
+
         return true;
     }
 
     @Override
     public String toString() {
+
         return "Telefone{}";
     }
 }
