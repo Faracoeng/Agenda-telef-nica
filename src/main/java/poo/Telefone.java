@@ -12,8 +12,7 @@ public class Telefone {
         tabelaDeTelefones = new HashMap<>();
     }
     private boolean validacaoTelefone(String numero){
-        String telefoneER = "^[1-9]{2}([9][1-9][0-9]{7}|[1-9][0-9]{7})$";
-        return numero.matches(telefoneER);
+        return numero.matches(tel);
     }
 
     public boolean add(String r, String n){
