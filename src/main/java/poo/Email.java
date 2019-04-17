@@ -3,10 +3,13 @@ package poo;
 import java.util.HashMap;
 
 public class Email {
+    //Atributos
     private HashMap <String, String> tabelaDeEmails;
+    String emailER = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
 
+    //Métodos
     private boolean validacaoEmail(String email){
-        String emailER = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+
         return email.matches(emailER);
     }
 

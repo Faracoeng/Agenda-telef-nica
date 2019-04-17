@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class Telefone {
     // Atributos
     private HashMap <String, String> tabelaDeTelefones;
+    String tel = "^[1-9]{2}([9][1-9][0-9]{7}|[1-9][0-9]{7})$";
 
     //Métodos
     public Telefone(){
@@ -12,7 +13,7 @@ public class Telefone {
     }
 
     public boolean add(String r, String n){
-        String tel = "^[1-9]{2}([9][1-9][0-9]{7}|[1-9][0-9]{7})$";
+
 
         if(!n.matches(tel)) return false;
         if(tabelaDeTelefones.containsKey(r)) return false;
@@ -21,6 +22,7 @@ public class Telefone {
     }
 
     public boolean remover(String r){
+
 
         return true;
     }
