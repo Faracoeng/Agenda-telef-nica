@@ -39,7 +39,9 @@ public class Telefone {
 
     @Override
     public String toString() {
-
-        return "Telefone{}";
+        return "Telefone{" +
+                "tabelaDeTelefones=" + tabelaDeTelefones +
+                ", tel='" + tel + '\'' +
+                '}';
     }
 }

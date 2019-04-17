@@ -41,6 +41,7 @@ public class Email {
     public String toString() {
         return "Email{" +
                 "tabelaDeEmails=" + tabelaDeEmails +
+                ", emailER='" + emailER + '\'' +
                 '}';
     }
 }
