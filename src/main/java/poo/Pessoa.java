@@ -15,26 +15,33 @@ public class Pessoa {
         this.nome = n;
         this.sobrenome = s;
         this.dataNasc = dn;
+        this.telefones = new Telefone();
+        this.emails = new Email();
     }
 
     public boolean addTelefone(String r, String n){
-        return true;
+        return this.telefones.add(r, n);
     }
 
     public boolean addEmail(String r, String e){
-        return true;
+        return this.emails.add(r, e);
     }
 
     public boolean removeTelefone(String r){
-        return true;
+        return this.telefones.remover(r);
     }
 
     public boolean removeEmail(String r){
-        return true;
+        return this.emails.remove(r);
     }
 
     public boolean updateTelefone(String r, String n){
-        return true;
+        return this.telefones.update(r, n);
+    }
+
+    public boolean updateEmail(String r, String e){
+
+        return this.emails.update(r, e);
     }
 
     @Override
@@ -47,13 +54,4 @@ public class Pessoa {
                 ", emails=" + emails +
                 '}';
     }
-
-    public boolean updateEmail(String r, String e){
-        return true;
-    }
-
-
-
-
-
 }
