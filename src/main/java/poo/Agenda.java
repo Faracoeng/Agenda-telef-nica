@@ -8,9 +8,13 @@ public class Agenda {
 
     // Métodos
 
-    public Agenda(){}
+    public Agenda(){
+        this.contatos = new ArrayList<>();  //Construtor instancia agenda como um ArrayList
+    }
 
-    public void addPessoa(Pessoa p){}
+    public void addPessoa(Pessoa p){
+        this.contatos.add(p);
+    }
 
     public boolean removePessoa(String n, String s){
         return true;
