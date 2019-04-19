@@ -41,24 +41,32 @@ public class Agenda {
     }
 
 
-    public boolean addEmail(String r, String e, int pIndex){
-        return true;
+    public boolean addEmail(String r, String e, int pIndex){    // igual método addTelefone()
+        if(!verificaPosicao(pIndex)) return false;
+        return contatos.get(pIndex).addEmail(r, e);
     }
 
-    public boolean updateTelefone(String r, String n, int pIndex){
-        return true;
+    public boolean updateTelefone(String r, String n, int pIndex){  // Mesma ideia dos métodos de adicionar
+                                                                    // porem utiliza o método update tatnto
+                                                                    //para email quanto para telefone
+        if(!verificaPosicao(pIndex)) return false;
+        return contatos.get(pIndex).updateTelefone(r, n);
     }
 
     public boolean updateEmail(String r, String e, int pIndex){
-        return true;
+        if(!verificaPosicao(pIndex)) return false;
+        return contatos.get(pIndex).updateEmail(r, e);
     }
 
     public boolean removeTelefone(String r, int pIndex){
-        return true;
+        if(!verificaPosicao(pIndex)) return false;
+        return contatos.get(pIndex).removeTelefone(r);
+
     }
 
     public boolean removeEmail(String r, int pIndex){
-        return true;
+        if(!verificaPosicao(pIndex)) return false;
+        return contatos.get(pIndex).removeEmail(r);
     }
 
     @Override
@@ -66,5 +74,6 @@ public class Agenda {
         return "Agenda{" +
                 "contatos=" + contatos +
                 '}';
-    }//teste
-}
+    }
+}//teste
+
