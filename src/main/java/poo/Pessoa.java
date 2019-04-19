@@ -44,14 +44,13 @@ public class Pessoa {
         return this.emails.update(r, e);
     }
         // Comentado
+
+
     @Override
     public String toString() {
         return "Pessoa{" +
                 "nome='" + nome + '\'' +
                 ", sobrenome='" + sobrenome + '\'' +
-                ", dataNasc=" + dataNasc +
-                ", telefones=" + telefones +
-                ", emails=" + emails +
                 '}';
     }
 }

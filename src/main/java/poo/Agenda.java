@@ -17,7 +17,13 @@ public class Agenda {
     }
 
     public boolean removePessoa(String n, String s){
-        return true;
+        for (Pessoa p : contatos) {
+            if(p.toString() == n + s){
+                contatos.remove(contatos.indexOf(p));
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean addTelefone(String r, String n, int pIndex){
