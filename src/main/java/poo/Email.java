@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Email {
     //Atributos
     private HashMap <String, String> tabelaDeEmails;
-    String emailER = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";  //Expressão regular do formato de telefone
+    private String emailER = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";  //Expressão regular do formato 
 
     //Métodos
     private boolean validacaoEmail(String email){
