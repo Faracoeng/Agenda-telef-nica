@@ -3,47 +3,67 @@ package poo;
 import java.time.LocalDate;
 
 public class Pessoa {
-    //Atributos
+    // Atributos
+
     private String nome;
     private String sobrenome;
-    private LocalDate dataNasc; // é do java
-    private Telefone telefones;//Objeto da classe Telefone
-    private Email emails;////Objeto da classe Email
+    private LocalDate dataNascimento;
+    private Telefone telefones;
+    private Email emails;
 
-    //Métodos
-    public Pessoa(String n,String s,LocalDate dn){  //Construtor instancia os objetos e atrubui respectivos dados de nome,sobrenome e data de nascimento
+// Metodos
+
+    public Pessoa(String n,String s,LocalDate dN, String num, String rotuloNum, String email, String rotuloEmail){  //Construtor instancia os objetos e atrubui respectivos dados de nome,sobrenome e data de nascimento
         this.nome = n;
         this.sobrenome = s;
-        this.dataNasc = dn;
+        this.dataNascimento = dN;
         this.telefones = new Telefone();
         this.emails = new Email();
-    }
+        if (addTelefone(rotuloNum,num)){
+            System.out.println("Telefone adicionado com sucesso");
+        }else System.out.println("Não foi possível adicionar o telefone, verifique os dados informados: Formato --> (\"(##)#####-####\")");
 
-    public boolean addTelefone(String r, String n){ //utiliza o método add() da classe Telefone
-        return this.telefones.add(r, n);    //Como o tratamento de erros ja foi feito la na classe, aqui basta apenas chamar o método
+        if (addEmail(rotuloEmail,email)){
+            System.out.println("E-mail adicionado com sucesso");
+        }else System.out.println("Não foi possível adicionar o e-mail, verifique os dados informados");
     }
-
-    public boolean addEmail(String r, String e){        //utiliza o método add() da classe Email
-        return this.emails.add(r, e);                //Como o tratamento de erros ja foi feito la na classe, aqui basta apenas chamar o método
+    public boolean addTelefone(String r, String n){
+        return this.telefones.add(r, n);
     }
-
-    public boolean removeTelefone(String r){        //Chama o método remover() da classe Telefone
-        return this.telefones.remover(r);           //Sem tratamento de erro, remove o dado da HashMap
+    //
+    public boolean addEmail(String r, String e){
+        return this.emails.add(r, e);
     }
-
-    public boolean removeEmail(String r){           //Igual anterior
+    //
+    public boolean removeTelefone(String r){
+        return this.telefones.remover(r);
+    }
+    //
+    public boolean removeEmail(String r){
         return this.emails.remove(r);
     }
-
-    public boolean updateTelefone(String r, String n){ //Igual anteriores
+    //
+    public boolean updateTelefone(String r, String n){
         return this.telefones.update(r, n);
     }
-
-    public boolean updateEmail(String r, String e){ //Igual anteriores
-
+    //
+    public boolean updateEmail(String r, String e){
         return this.emails.update(r, e);
     }
-        // Comentado
 
+    public String getNome() {
+        return nome;
+    }
 
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    @Override
+    public String toString() {
+        return  '\n'+"Nome = " + nome + " " + sobrenome + '\n' +
+                "Data de nascimento = " + dataNascimento + '\n' +
+                "Telefone = " + telefones + '\n'+
+                "Email = " + emails + '\n';
+    }
 }
